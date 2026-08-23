@@ -1,0 +1,20 @@
+[
+  { "name": "product management" },
+  { "name": "web development", "type": "software" },
+  { "name": "Node.js", "type": "software" },
+  { "name": "UI design", "type": "software" },
+  { "name": "copywriting" },
+  { "name": "user research" },
+  { "name": "React", "type": "software" },
+  { "name": "TypeScript", "type": "software" },
+  { "name": "Python", "type": "software" },
+  { "name": "event planning" },
+  { "name": "hardware projects" },
+  { "name": "aviation" },
+  { "name": "theater tech" },
+  { "name": "photography" },
+  { "name": "audio mixing" },
+  { "name": "video editing" },
+  { "name": "scuba diving" },
+  { "name": "ballroom dance" }
+]

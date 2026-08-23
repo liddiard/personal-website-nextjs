@@ -1,0 +1,22 @@
+[
+  {
+    "url": "/",
+    "text": "Home",
+    "external": false
+  },
+  {
+    "url": "/resume",
+    "text": "Resumé",
+    "external": false
+  },
+  {
+    "url": "https://linkedin.com/in/liddiard/",
+    "text": "LinkedIn",
+    "external": true
+  },
+  {
+    "url": "https://github.com/liddiard/",
+    "text": "GitHub",
+    "external": true
+  }
+]
