@@ -1,5 +1,5 @@
 ---
-title: UCLA Bruins championships showcase
+title: UCLA Bruins Championships
 description: 'Explore the Bruins’ history of wins'
 year: 2016
 link: http://uclabruins.com/championships

@@ -43,7 +43,7 @@ const END_MARKER: Element = {
   type: 'element',
   tagName: 'span',
   properties: { className: ['secondary-accent'] },
-  children: [{ type: 'text', value: ' ■' }],
+  children: [{ type: 'text', value: ' ■' }],
 }
 
 /**

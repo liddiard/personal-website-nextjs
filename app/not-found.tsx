@@ -7,34 +7,12 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
   return (
-    <Layout page="credits">
-      <h1>Not Found</h1>
+    <Layout page="not-found">
+      <div className="text-9xl font-thin">404</div>
+      <h1 className="text-4xl">Not Found</h1>
       <p>
-        Uh oh! That page doesn’t exist. Try one of the links from the navigation
-        above.
-      </p>
-      <div
-        style={{
-          width: '100%',
-          height: 0,
-          paddingBottom: '100%',
-          position: 'relative',
-        }}
-      >
-        <iframe
-          src="https://giphy.com/embed/YyKPbc5OOTSQE"
-          width="100%"
-          height="100%"
-          style={{ position: 'absolute' }}
-          className="giphy-embed"
-          title="404"
-          allowFullScreen
-        />
-      </div>
-      <p>
-        <a href="https://giphy.com/gifs/gustavo-art-kidmograph-gustavo-YyKPbc5OOTSQE">
-          via GIPHY
-        </a>
+        Uh oh! That page doesn’t exist. <br />
+        Try one of the links from the navigation above.
       </p>
     </Layout>
   )
