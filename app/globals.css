@@ -319,7 +319,12 @@
     position: relative;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     line-height: 1.4;
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: 67% 33%;
+  }
+
+  main.resume nav {
+    grid-column: 1 / -1;
   }
 
   main.resume h1,
@@ -410,22 +415,20 @@
   @media print {
     main.resume .header-resume {
       display: block;
+      grid-column: 1 / -1;
     }
   }
 
   main.resume .col {
     box-sizing: border-box;
-    float: left;
   }
 
   main.resume .col.left {
     padding-right: 3.5em;
-    width: 67%;
   }
 
   main.resume .col.right {
     padding-right: 1em;
-    width: 33%;
   }
 
   main.resume .item {
@@ -449,9 +452,15 @@
     font-weight: bold;
   }
 
+  main.resume h3.position,
+  main.resume h3.school {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 1em;
+  }
+
   main.resume .date {
     font-weight: normal;
-    float: right;
     color: #888;
   }
 
@@ -465,7 +474,8 @@
   }
 
   main.resume .print {
-    float: right;
+    grid-column: 2;
+    place-self: end;
     cursor: pointer;
     font-weight: bold;
   }
@@ -482,13 +492,16 @@
   }
 
   @media (max-width: 600px) {
-    main.resume .col {
-      float: none;
+    main.resume {
+      grid-template-columns: 1fr;
+    }
+
+    main.resume .print {
+      grid-column: 1;
     }
 
     main.resume .col.left,
     main.resume .col.right {
-      width: 100%;
       padding: 0;
     }
 
