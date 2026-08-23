@@ -1,6 +1,6 @@
 ---
 title: kikl.co
-description: The link shortener for easy to type and remember URLs
+description: The link shortener for easy-to-type and remember URLs
 year: 2024
 involvement: creator
 skills: Django, SQL, Vue.js, Tailwind CSS

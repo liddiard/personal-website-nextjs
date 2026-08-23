@@ -1,9 +1,9 @@
-import { Gabarito, Lexend, Oxygen } from 'next/font/google'
+import { Crimson_Pro, Lexend, Oxygen } from 'next/font/google'
 
-export const gabarito = Gabarito({
+export const crimsonPro = Crimson_Pro({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-gabarito',
+  variable: '--font-crimson-pro',
 })
 
 export const lexend = Lexend({

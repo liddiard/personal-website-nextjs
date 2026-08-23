@@ -4,25 +4,13 @@ import skillsJson from '@/data/skills.json'
 import interestsJson from '@/data/interests.json'
 import { getAllProjects } from '@/lib/projects'
 
-interface Skill {
-  name: string
-  type?: string
-}
-
-const skills = skillsJson as Skill[]
+const skills = skillsJson as string[]
 const interests = interestsJson as Array<{ name: string }>
 
-const Skills = ({ data }: { data: Skill[] }) => (
+const Skills = ({ data }: { data: string[] }) => (
   <ul className="skills">
     {data.map((skill) => (
-      <li
-        key={skill.name}
-        className={
-          skill.type === 'software' ? 'primary-accent font-semibold' : ''
-        }
-      >
-        {skill.name}
-      </li>
+      <li key={skill}>{skill}</li>
     ))}
   </ul>
 )
@@ -42,62 +30,75 @@ export default function Home() {
 
   return (
     <Layout page="front">
-      <header>
-        <h1 className="name">Harrison Liddiard</h1>
-        <p className="tagline">Product manager, design & aviation enthusiast</p>
-      </header>
-      <p className="lede">
-        Hi! I’m Harrison, a technical product manager at{' '}
-        <a
-          href="https://www.paypal.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          PayPal
-        </a>{' '}
-        with a software engineering background. Check out my{' '}
-        <a href="#projects">projects</a> below and my{' '}
-        <Link href="/resume">resumé</Link> for some things I’ve done. You can
-        also find me on{' '}
-        <a
-          href="https://linkedin.com/in/liddiard"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          LinkedIn
-        </a>{' '}
-        and{' '}
-        <a
-          href="https://github.com/liddiard/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub
-        </a>
-        .
-      </p>
-      <h2>Skills & Interests</h2>
-      <p>
-        Here’s some stuff I enjoy learning about and doing. Technical skills are
-        in{' '}
-        <span className="primary-accent">
-          <strong>purple</strong>
-        </span>
-        :
-      </p>
-      <Skills data={skills} />
-      <h2>Industries</h2>
-      <p>I’m particularly interested in these areas of work:</p>
-      <Interests data={interests} />
+      <section className="intro">
+        <div className="flex flex-col gap-4">
+          <h1 className="name">Harrison Liddiard</h1>
+          <p className="tagline">
+            Product manager, design & aviation enthusiast
+          </p>
+        </div>
+        <div className="lede">
+          <p className="mt-3">
+            Hi! I’m Harrison, a technical product manager at{' '}
+            <a
+              href="https://www.paypal.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              PayPal
+            </a>{' '}
+            with a software engineering background.
+          </p>
+          <p>
+            Check out my <a href="#projects">projects</a> below and my{' '}
+            <Link href="/resume">resumé</Link> for some things I’ve done. You
+            can also find me on{' '}
+            <a
+              href="https://linkedin.com/in/liddiard"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>{' '}
+            and{' '}
+            <a
+              href="https://github.com/liddiard/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+            .
+          </p>
+        </div>
+      </section>
+      <section className="interests-section">
+        <div>
+          <h2>Skills & Interests</h2>
+          <p className="text-balance">
+            Here are some things I’m decent at and enjoy doing:
+          </p>
+          <Skills data={skills} />
+        </div>
+        <div>
+          <h2>Industries</h2>
+          <p className="text-balance">
+            I’m particularly interested in solving problems in these areas:
+          </p>
+          <Interests data={interests} />
+        </div>
+      </section>
       <h2 id="projects">Projects</h2>
-      Some things I’ve made – most recent first:
+      Here are some things I’ve built:
       <ul className="projects">
         {projects.map((project) => (
           <li key={project.slug}>
-            <Link href={`/project/${project.slug}`}>
-              {project.frontmatter.title}
-            </Link>
-            : {project.frontmatter.description}
+            <h3>
+              <Link href={`/project/${project.slug}`}>
+                {project.frontmatter.title}
+              </Link>
+            </h3>
+            <p>{project.frontmatter.description}</p>
           </li>
         ))}
       </ul>

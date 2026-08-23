@@ -10,7 +10,7 @@ interface NavLink {
 const navLinks = navLinksJson as NavLink[]
 
 const Header = () => (
-  <nav className="mb-[1.5em] font-sans text-[1.2rem]">
+  <nav className="mb-4 font-body text-xl text-center">
     <ul className="mt-0 list-none p-0 font-semibold">
       {navLinks.map(({ url, text, external }) => (
         <li key={text} className="inline-block pr-[1em]">

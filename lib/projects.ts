@@ -1,5 +1,6 @@
 import fs from 'node:fs'
 import path from 'node:path'
+import type { Element, Root, Text } from 'hast'
 import matter from 'gray-matter'
 import { unified } from 'unified'
 import remarkParse from 'remark-parse'
@@ -37,11 +38,47 @@ export interface Project {
   frontmatter: ProjectFrontmatter
 }
 
+/** HAST element for the "■" end-of-article marker. */
+const END_MARKER: Element = {
+  type: 'element',
+  tagName: 'span',
+  properties: { className: ['secondary-accent'] },
+  children: [{ type: 'text', value: ' ■' }],
+}
+
+/**
+ * Rehype plugin that appends a "■" marker immediately after the final word of
+ * the article.
+ */
+const appendEndMarker = () => (tree: Root) => {
+  let lastText: Text | undefined
+  let lastParent: Element | Root | undefined
+
+  const visit = (node: Element | Root) => {
+    for (const child of node.children) {
+      if (child.type === 'text') {
+        lastText = child
+        lastParent = node
+      } else if (child.type === 'element') {
+        visit(child)
+      }
+    }
+  }
+
+  visit(tree)
+
+  if (lastText && lastParent) {
+    const index = lastParent.children.indexOf(lastText)
+    lastParent.children.splice(index + 1, 0, END_MARKER)
+  }
+}
+
 const markdownToHtml = (markdown: string): string =>
   unified()
     .use(remarkParse)
     .use(remarkGfm)
     .use(remarkRehype, { allowDangerousHtml: true })
+    .use(appendEndMarker)
     .use(rehypeStringify, { allowDangerousHtml: true })
     .processSync(markdown)
     .toString()

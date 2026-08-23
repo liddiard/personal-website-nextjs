@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
-import { gabarito, lexend } from '@/lib/fonts'
+import { crimsonPro, lexend } from '@/lib/fonts'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${gabarito.variable} ${lexend.variable}`}>
+    <html lang="en" className={`${crimsonPro.variable} ${lexend.variable}`}>
       <body>{children}</body>
     </html>
   )
