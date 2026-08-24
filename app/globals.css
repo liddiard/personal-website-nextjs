@@ -412,6 +412,10 @@
       font-weight: normal;
     }
 
+    h1.page-title {
+      margin: 0;
+    }
+
     h2 {
       margin: 1em 0 0.5em 0;
       font-size: 1.75em;
@@ -545,16 +549,18 @@
     }
 
     .print {
+      display: flex;
+      gap: 0.3em;
+      align-items: center;
       grid-column: 2;
       place-self: end;
       cursor: pointer;
+      font-family: var(--font-body);
+      font-size: 1.3em;
       font-weight: bold;
 
-      img {
-        padding-left: 1px;
-        vertical-align: bottom;
-
-        @media (prefers-color-scheme: dark) {
+      @media (prefers-color-scheme: dark) {
+        img {
           filter: invert(1);
         }
       }
