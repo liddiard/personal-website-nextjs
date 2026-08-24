@@ -7,7 +7,7 @@
   --color-primary: oklch(0.6583 0.1255 222.19);
   --color-secondary: oklch(0.65 0.1456 44.35);
   --font-body: var(--font-crimson-pro), ui-serif, Georgia, serif;
-  --font-heading: var(--font-lexend), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-encode-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono:
     'SFMono-Regular', Consolas, Menlo, Courier, 'Courier New', monospace;
 }
@@ -78,7 +78,7 @@
     font-weight: 600;
     line-height: 1.1;
     margin-bottom: 0.5em;
-    letter-spacing: -0.02ch;
+    letter-spacing: 0.04ch;
   }
 
   h1 {

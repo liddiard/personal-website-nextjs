@@ -1,4 +1,4 @@
-import { Crimson_Pro, Lexend, Oxygen } from 'next/font/google'
+import { Crimson_Pro, Encode_Sans, Oxygen } from 'next/font/google'
 
 export const crimsonPro = Crimson_Pro({
   subsets: ['latin'],
@@ -6,10 +6,10 @@ export const crimsonPro = Crimson_Pro({
   variable: '--font-crimson-pro',
 })
 
-export const lexend = Lexend({
+export const lexend = Encode_Sans({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-lexend',
+  variable: '--font-encode-sans',
 })
 
 export const oxygen = Oxygen({
