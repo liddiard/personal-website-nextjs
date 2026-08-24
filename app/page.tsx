@@ -91,7 +91,7 @@ export default function Home() {
       <h2 id="projects" className="highlight">
         Projects
       </h2>
-      Here are some things I’ve built:
+      Here are some things I’ve built over the years:
       <ul className="projects">
         {projects.map((project) => (
           <li key={project.slug}>
