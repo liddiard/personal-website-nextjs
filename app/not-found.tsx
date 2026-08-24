@@ -10,7 +10,7 @@ export default function NotFound() {
     <Layout page="not-found">
       <div className="text-9xl font-thin">404</div>
       <h1 className="text-4xl">Not Found</h1>
-      <p>
+      <p className="leading-relaxed">
         Uh oh! That page doesn’t exist. <br />
         Try one of the links from the navigation above.
       </p>
