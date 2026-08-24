@@ -38,7 +38,7 @@ Here’s a sampling of searches and results that underscores how much richer the
   - TypeEmoji: 🏊‍♂️ 🚴‍♂️ 🏃‍♂️ 🏅 🏆 💪 🌊 🚵‍♀️ 🥇 ⏱️
 - query: “new york city”
   - Apple: 🗽
-  - TypeEmoji: 🗽 🌆 🚖 🏙️ 🗺️ 🎭 🍕 🚕 ✨ 🌇
+  - TypeEmoji: 🗽 🌆 🚖 🏙️ 🗺️ 🎭 🍕 🚕 ✨
 - query: “martial arts”
   - Apple: 🥋
   - TypeEmoji: 🥋 🏋️‍♂️ 🥊 🧘‍♂️ 👊 ⚔️ 💪 🤼‍♂️ 🏆 🤸‍♀️
