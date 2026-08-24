@@ -12,7 +12,7 @@ export default function NotFound() {
       <h1 className="text-4xl">Not Found</h1>
       <p className="leading-relaxed">
         Uh oh! That page doesn’t exist. <br />
-        Try one of the links from the menu above.
+        Try a link from the menu above.
       </p>
     </Layout>
   )
