@@ -5,7 +5,7 @@ import interestsJson from '@/data/interests.json'
 import { getAllProjects } from '@/lib/projects'
 
 const skills = skillsJson as string[]
-const interests = interestsJson as Array<{ name: string }>
+const interests = interestsJson as string[]
 
 const Skills = ({ data }: { data: string[] }) => (
   <ul className="skills">
@@ -15,10 +15,10 @@ const Skills = ({ data }: { data: string[] }) => (
   </ul>
 )
 
-const Interests = ({ data }: { data: Array<{ name: string }> }) => (
+const Interests = ({ data }: { data: string[] }) => (
   <ul className="interests">
     {data.map((interest) => (
-      <li key={interest.name}>{interest.name}</li>
+      <li key={interest}>{interest}</li>
     ))}
   </ul>
 )

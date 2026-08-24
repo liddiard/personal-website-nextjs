@@ -1,8 +1,8 @@
 [
-  { "name": "transportation" },
-  { "name": "logistics" },
-  { "name": "education" },
-  { "name": "finance" },
-  { "name": "healthcare" },
-  { "name": "journalism" }
+  "education",
+  "finance",
+  "healthcare",
+  "transportation",
+  "logistics",
+  "journalism"
 ]
