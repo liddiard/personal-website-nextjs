@@ -32,7 +32,7 @@ export default function Home() {
     <Layout page="front">
       <section className="intro">
         <div className="flex flex-col gap-4">
-          <h1 className="name">Harrison Liddiard</h1>
+          <h1 className="name highlight">Harrison Liddiard</h1>
           <p className="tagline">
             Product manager, design & aviation enthusiast
           </p>
@@ -74,21 +74,23 @@ export default function Home() {
       </section>
       <section className="interests-section">
         <div>
-          <h2>Skills & Interests</h2>
+          <h2 className="highlight">Skills & Interests</h2>
           <p className="text-balance">
             Here are some things I’m decent at and enjoy doing:
           </p>
           <Skills data={skills} />
         </div>
         <div>
-          <h2>Industries</h2>
+          <h2 className="highlight">Industries</h2>
           <p className="text-balance">
             I’m particularly interested in solving problems in these areas:
           </p>
           <Interests data={interests} />
         </div>
       </section>
-      <h2 id="projects">Projects</h2>
+      <h2 id="projects" className="highlight">
+        Projects
+      </h2>
       Here are some things I’ve built:
       <ul className="projects">
         {projects.map((project) => (

@@ -113,7 +113,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   return (
     <Layout page="project" className={isArticleLayout ? 'article-layout' : ''}>
       <article>
-        <h1>{metadata.title}</h1>
+        <h1 className="highlight">{metadata.title}</h1>
         <h2>{metadata.description}</h2>
         <table className="project-info">
           <tbody>
