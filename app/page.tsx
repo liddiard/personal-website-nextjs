@@ -39,7 +39,7 @@ export default function Home() {
         </div>
         <div className="lede">
           <p className="mt-3">
-            Hi! I’m Harrison, a technical product manager at{' '}
+            Hi! I’m Harrison, a senior product manager at{' '}
             <a
               href="https://www.paypal.com"
               target="_blank"
