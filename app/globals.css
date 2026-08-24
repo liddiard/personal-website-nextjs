@@ -164,7 +164,7 @@
       margin: 0;
       font-size: 1.8rem;
       font-weight: 500;
-      line-height: 1.2;
+      line-height: 1.15;
     }
 
     .lede {
@@ -312,7 +312,6 @@
     img,
     video {
       max-width: 100%;
-      border: 2px solid var(--color-primary);
     }
 
     figure {
