@@ -11,7 +11,7 @@ const navLinks = navLinksJson as NavLink[]
 
 const Header = () => (
   <nav className="mb-4 font-body text-xl">
-    <ul className="mt-0 list-none p-0 font-semibold flex gap-x-6 gap-y-2 justify-center flex-wrap">
+    <ul className="mt-0 list-none p-0 font-semibold flex gap-x-5 gap-y-2 justify-center flex-wrap">
       {navLinks.map(({ url, text, external }) => (
         <li key={text}>
           {external ? <a href={url}>{text}</a> : <Link href={url}>{text}</Link>}
