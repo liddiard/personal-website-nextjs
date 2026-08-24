@@ -394,13 +394,13 @@
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     line-height: 1.4;
     display: grid;
-    grid-template-columns: 67% 33%;
+    grid-template-columns: 2fr 1fr;
 
     nav {
       grid-column: 1 / -1;
     }
 
-    h1,
+    h1:not(.page-title),
     h2,
     h3,
     h4,
@@ -442,10 +442,6 @@
 
     li {
       margin-bottom: 0.35em;
-    }
-
-    .page-title {
-      font-weight: bold;
     }
 
     .tech-skills p {
