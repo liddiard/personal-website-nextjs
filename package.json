@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "deploy": "npm run build && aws s3 sync out/ s3://harrisonliddiard.com/ --delete",
     "start": "next start",
     "lint": "eslint",
     "format": "prettier --write .",
