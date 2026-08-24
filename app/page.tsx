@@ -76,7 +76,7 @@ export default function Home() {
         <div>
           <h2 className="highlight">Skills & Interests</h2>
           <p className="text-balance">
-            Here are some things I’m decent at and enjoy doing:
+            Here are some things I’m experienced with and enjoy doing:
           </p>
           <Skills data={skills} />
         </div>
@@ -91,7 +91,9 @@ export default function Home() {
       <h2 id="projects" className="highlight">
         Projects
       </h2>
-      Here are some things I’ve built over the years:
+      <p className="text-balance">
+        Here are some things I’ve built over the years:
+      </p>
       <ul className="projects">
         {projects.map((project) => (
           <li key={project.slug}>
