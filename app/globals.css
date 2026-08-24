@@ -37,9 +37,13 @@
   }
 
   body {
-    background: url('/img/website_background.svg') repeat;
+    background:
+      url('/img/background_gridline.svg') repeat,
+      url('/img/website_background.svg') repeat;
+    background-size:
+      auto,
+      max(1280px, 100vw) auto;
     background-color: var(--color-background);
-    background-size: max(1280px, 100vw) auto;
     min-height: 100vh;
     color: var(--color-text);
     font-family: var(--font-body);
