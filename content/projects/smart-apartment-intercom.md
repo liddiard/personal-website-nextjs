@@ -85,7 +85,7 @@ I started off using a hefty [20,000mAh battery bank](https://www.amazon.com/dp/B
 
 ### Ground reference
 
-Switching the Shelly to a DC wall adapter broke its analog input detection of the buzz voltage. Upon a bit of AI-assisted debugging, I learned that this was caused by a [ground reference problem](<https://en.wikipedia.org/wiki/Ground_loop_(electricity)>). To solve it, I ended up integrating a [DC-DC isolated power converter](https://www.amazon.com/dp/B0F4DMW44V) to separate the PCB’s ground reference from [mains](https://en.wikipedia.org/wiki/Mains_electricity) ground.
+Switching the Shelly to a DC wall adapter broke its analog input detection of the buzz voltage. I learned that this was caused by a [ground reference problem](<https://en.wikipedia.org/wiki/Ground_loop_(electricity)>). To solve it, I ended up integrating a [DC-DC isolated power converter](https://www.amazon.com/dp/B0F4DMW44V) to separate the PCB’s ground reference from [mains](https://en.wikipedia.org/wiki/Mains_electricity) ground.
 
 ### Fail-safe
 
@@ -121,7 +121,7 @@ I additionally set up a Home Assistant automation that monitors the relays’ st
 
 So how does this all come together? [Home Assistant](https://www.home-assistant.io/) is the brains of the operation, which [integrates with Shelly devices](https://www.home-assistant.io/integrations/shelly/).
 
-HA detects when the buzzer voltage jumps above a threshold, indicating a call box press. As long as my phone isn’t in “Sleeping” or “Do Not Disturb” modes, it broadcasts an announcement over my smart speakers. If I’m home, I can just respond verbally (e.g., “Alexa, open the door”).
+HA detects when the buzzer voltage jumps above a threshold, indicating a call box press. If my phone isn’t in “Do Not Disturb” mode, it broadcasts an announcement over my smart speakers. If I’m home, I can just respond verbally (e.g., “Alexa, open the door”).
 
 If I’m away, I can tap a push notification sent to my phone to unlock the door. I also have my HA dashboard configured to show a door unlock button if the call box was buzzed within the last minute.
 
@@ -147,4 +147,4 @@ The updated version reduces the number of connections and now only requires one 
 
 In this new setup, I replaced the speaker with a similar-ohm resistor. I personally care more about silencing the loud warbling tone when the call box is rung than I do being able to talk/listen on the intercom. You could, however, leave the speaker wired up and retain the buzz tone and talk/listen functionality while _also_ detecting the tone electronically.
 
-The only other hiccup with my new intercom is that the enclosure is made of metal rather than plastic, so the Wi-Fi signal has a tougher time getting through. To address this, I purchased a cheap [2.4 GHz range extender](https://www.amazon.com/dp/B08DHLCLCY) ($15 as of writing). With it plugged in even a few meters away, the Shelly board’s intermittent connection issue was resolved.
+The only other hiccup with my new intercom is that the enclosure is made of metal rather than plastic, so the Wi-Fi signal has a tough time getting through. To fix this, I bought a cheap [2.4 GHz range extender](https://www.amazon.com/dp/B08DHLCLCY) ($15 as of writing). With it plugged in nearby, the Shelly board’s intermittent connection issue was resolved.
