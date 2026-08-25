@@ -19,8 +19,7 @@ export default function Credits() {
     <Layout page="credits">
       <h1>Background Image Credits</h1>
       <p>
-        From top to bottom, left to right. All works have been modified by me
-        unless otherwise noted.
+        From top to bottom, left to right. All works have been modified by me.
       </p>
       <ul>
         {credits.map((credit) => (
