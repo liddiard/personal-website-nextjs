@@ -93,7 +93,7 @@ export default function Home() {
         Projects
       </h2>
       <p className={styles.sectionIntro}>
-        A selection of things I’ve built over the years:
+        A selection of what I’ve built over the years:
       </p>
       <ul className={styles.projects}>
         {projects.map((project) => (
