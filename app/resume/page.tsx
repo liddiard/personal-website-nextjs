@@ -14,7 +14,7 @@ export default function Resume() {
   return (
     <Layout page={styles.resume} className={oxygen.variable}>
       <div className={styles.pageHeader}>
-        <h1 className={styles.pageTitle}>Resumé</h1>
+        <h1 className={`${styles.pageTitle} highlight`}>Resumé</h1>
         <PrintButton />
       </div>
       <header className={styles.printHeader}>
