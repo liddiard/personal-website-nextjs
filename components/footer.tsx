@@ -1,9 +1,10 @@
 'use client'
 
 import Link from 'next/link'
+import styles from './footer.module.css'
 
 const Footer = () => (
-  <footer className="clear-both float-right m-4 max-w-[440px] text-right text-sm opacity-70 text-balance">
+  <footer className={styles.siteFooter}>
     Content © {new Date().getFullYear()} Harrison Liddiard. All rights reserved.
     Product names, logos, and brands are property of their respective owners.{' '}
     <Link href="/credits">Background image credits</Link>.

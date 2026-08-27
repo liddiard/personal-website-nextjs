@@ -1,0 +1,199 @@
+.resume {
+  font-size: 1rem;
+  margin: 0 auto;
+  max-width: 960px;
+  position: relative;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  nav {
+    grid-column: 1 / -1;
+  }
+
+  h1:not(.pageTitle),
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    font-family:
+      var(--font-oxygen), 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: normal;
+  }
+
+  h1.pageTitle {
+    margin: 0;
+  }
+
+  h2 {
+    margin: 1em 0 0.5em 0;
+    font-size: 1.75em;
+    line-height: 1.2;
+  }
+
+  h3 {
+    font-size: 1.17em;
+
+    &.position {
+      margin-bottom: 0.2em;
+    }
+  }
+
+  h4 {
+    font-size: 1.1em;
+    line-height: 1.3;
+
+    &.company {
+      margin-bottom: 0;
+    }
+  }
+
+  h3,
+  h4 {
+    margin-bottom: 0.5em;
+  }
+
+  li {
+    margin-bottom: 0.35em;
+  }
+
+  .techSkills p {
+    margin: 0.75em 0;
+  }
+
+  .headerResume {
+    display: none;
+
+    h1 {
+      font-family:
+        var(--font-oxygen), 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      text-align: center;
+      margin: 0.2em 0;
+      font-size: 4em;
+      font-weight: bold;
+    }
+
+    .contact {
+      list-style-type: none;
+      padding: 0;
+      margin: 0.5em 0 0;
+      text-align: center;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+      img {
+        width: 18px;
+      }
+
+      li {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4em;
+        margin: 0 0.75em;
+      }
+
+      a {
+        border: none;
+        text-decoration: none;
+      }
+    }
+
+    @media print {
+      display: block;
+      grid-column: 1 / -1;
+    }
+  }
+
+  .col {
+    box-sizing: border-box;
+
+    &.left {
+      padding-right: 3.5em;
+    }
+
+    &.right {
+      padding-right: 1em;
+    }
+  }
+
+  .item {
+    margin-bottom: 2em;
+    border-left: 1px solid #bbb;
+    padding-left: 1em;
+
+    ul {
+      list-style-type: square;
+      padding: 0 0 0 1.2em;
+      margin: 0.6em 0;
+    }
+
+    p {
+      margin: 0.6em 0;
+    }
+  }
+
+  .position,
+  .school {
+    font-weight: bold;
+  }
+
+  h3.position,
+  h3.school {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 1em;
+  }
+
+  .date {
+    font-weight: normal;
+    color: #888;
+  }
+
+  .skills,
+  .projects {
+    list-style-type: none;
+  }
+
+  .projectName {
+    font-weight: bold;
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+
+    .col.left,
+    .col.right {
+      padding: 0;
+    }
+
+    .item {
+      padding-left: 0.5em;
+    }
+
+    .date {
+      font-size: 85%;
+    }
+  }
+
+  @media print {
+    padding: 0;
+    line-height: 1.2;
+    font-size: 0.8rem;
+    box-shadow: none;
+
+    a {
+      text-decoration: underline;
+    }
+
+    .pageTitle,
+    nav {
+      display: none;
+    }
+
+    .item {
+      border-left: 1px solid #bbb;
+    }
+  }
+}

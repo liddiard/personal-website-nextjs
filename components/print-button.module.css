@@ -1,0 +1,25 @@
+.print {
+  display: flex;
+  gap: 0.3em;
+  align-items: center;
+  grid-column: 2;
+  place-self: end;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 1.3em;
+  font-weight: bold;
+
+  @media (prefers-color-scheme: dark) {
+    img {
+      filter: invert(1);
+    }
+  }
+
+  @media (max-width: 600px) {
+    grid-column: 1;
+  }
+
+  @media print {
+    display: none;
+  }
+}

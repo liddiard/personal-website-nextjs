@@ -1,0 +1,18 @@
+.siteNav {
+  margin-bottom: 1rem;
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  line-height: calc(1.75 / 1.25);
+
+  ul {
+    margin-top: 0;
+    list-style: none;
+    padding: 0;
+    font-weight: 600;
+    display: flex;
+    column-gap: 1.25rem;
+    row-gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

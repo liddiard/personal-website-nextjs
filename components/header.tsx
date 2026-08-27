@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import navLinksJson from '@/data/navLinks.json'
+import styles from './header.module.css'
 
 interface NavLink {
   url: string
@@ -10,8 +11,8 @@ interface NavLink {
 const navLinks = navLinksJson as NavLink[]
 
 const Header = () => (
-  <nav className="mb-4 font-body text-xl">
-    <ul className="mt-0 list-none p-0 font-semibold flex gap-x-5 gap-y-2 justify-center flex-wrap">
+  <nav className={styles.siteNav}>
+    <ul>
       {navLinks.map(({ url, text, external }) => (
         <li key={text}>
           {external ? <a href={url}>{text}</a> : <Link href={url}>{text}</Link>}

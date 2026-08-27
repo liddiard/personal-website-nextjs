@@ -1,17 +1,16 @@
 'use client'
 
 import type { MouseEvent, ReactNode } from 'react'
+import styles from './project-link.module.css'
 
 interface ProjectLinkProps {
   href: string
-  className?: string
   linkConfirmation?: string
   children: ReactNode
 }
 
 const ProjectLink = ({
   href,
-  className,
   linkConfirmation,
   children,
 }: ProjectLinkProps) => {
@@ -30,7 +29,7 @@ const ProjectLink = ({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={className}
+      className={styles.projectLink}
       onClick={handleClick}
     >
       {children}

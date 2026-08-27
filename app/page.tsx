@@ -3,12 +3,13 @@ import Layout from '@/components/layout'
 import skillsJson from '@/data/skills.json'
 import interestsJson from '@/data/interests.json'
 import { getAllProjects } from '@/lib/projects'
+import styles from './page.module.css'
 
 const skills = skillsJson as string[]
 const interests = interestsJson as string[]
 
 const Skills = ({ data }: { data: string[] }) => (
-  <ul className="skills">
+  <ul className={styles.skills}>
     {data.map((skill) => (
       <li key={skill}>{skill}</li>
     ))}
@@ -16,7 +17,7 @@ const Skills = ({ data }: { data: string[] }) => (
 )
 
 const Interests = ({ data }: { data: string[] }) => (
-  <ul className="interests">
+  <ul className={styles.interests}>
     {data.map((interest) => (
       <li key={interest}>{interest}</li>
     ))}
@@ -29,16 +30,16 @@ export default function Home() {
     .sort((a, b) => b.frontmatter.year - a.frontmatter.year)
 
   return (
-    <Layout page="front">
-      <section className="intro">
-        <div className="flex flex-col gap-4">
+    <Layout page={styles.front}>
+      <section className={styles.intro}>
+        <div className={styles.introHeading}>
           <h1 className="name highlight">Harrison Liddiard</h1>
-          <p className="tagline">
+          <p className={styles.tagline}>
             Product manager, design & aviation enthusiast
           </p>
         </div>
-        <div className="lede">
-          <p className="mt-3">
+        <div className={styles.lede}>
+          <p>
             Hi! I’m Harrison, a senior product manager at{' '}
             <a
               href="https://www.paypal.com"
@@ -72,17 +73,17 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <section className="interests-section">
+      <section className={styles.interestsSection}>
         <div>
           <h2 className="highlight">Skills & Interests</h2>
-          <p className="text-balance">
+          <p className={styles.sectionIntro}>
             Here are some things I’m experienced with and enjoy doing:
           </p>
           <Skills data={skills} />
         </div>
         <div>
           <h2 className="highlight">Industries</h2>
-          <p className="text-balance">
+          <p className={styles.sectionIntro}>
             I’m particularly interested in solving problems in these areas:
           </p>
           <Interests data={interests} />
@@ -91,10 +92,10 @@ export default function Home() {
       <h2 id="projects" className="highlight">
         Projects
       </h2>
-      <p className="text-balance">
+      <p className={styles.sectionIntro}>
         Here are some things I’ve built over the years:
       </p>
-      <ul className="projects">
+      <ul className={styles.projects}>
         {projects.map((project) => (
           <li key={project.slug}>
             <h3>

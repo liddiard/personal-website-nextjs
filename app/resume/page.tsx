@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Layout from '@/components/layout'
 import PrintButton from '@/components/print-button'
 import { oxygen } from '@/lib/fonts'
+import styles from './page.module.css'
 
 export const metadata: Metadata = {
   title: 'Resumé',
@@ -11,11 +12,11 @@ export const metadata: Metadata = {
 
 export default function Resume() {
   return (
-    <Layout page="resume" className={oxygen.variable}>
-      <h1 className="page-title">Resumé</h1>
-      <header className="header-resume">
+    <Layout page={styles.resume} className={oxygen.variable}>
+      <h1 className={styles.pageTitle}>Resumé</h1>
+      <header className={styles.headerResume}>
         <h1>Harrison Liddiard</h1>
-        <ul id="contact">
+        <ul className={styles.contact}>
           <li>
             <img src="/img/email.svg" alt="email" />
             harrison@liddiard.com
@@ -35,14 +36,14 @@ export default function Resume() {
         </ul>
       </header>
       <PrintButton />
-      <section className="col left">
+      <section className={`${styles.col} ${styles.left}`}>
         <h2>Work Experience</h2>
-        <div className="item">
-          <h3 className="position">
+        <div className={styles.item}>
+          <h3 className={styles.position}>
             Technical Product Manager & Sr. PM{' '}
-            <span className="date">2022 – present</span>
+            <span className={styles.date}>2022 – present</span>
           </h3>
-          <h4 className="company">PayPal</h4>
+          <h4 className={styles.company}>PayPal</h4>
           <ul>
             <li>
               Launched new merchant onboarding, cutting required signup fields
@@ -66,11 +67,12 @@ export default function Resume() {
             </li>
           </ul>
         </div>
-        <div className="item">
-          <h3 className="position">
-            Software Engineer 1–3 <span className="date">2017 – 2022</span>
+        <div className={styles.item}>
+          <h3 className={styles.position}>
+            Software Engineer 1–3{' '}
+            <span className={styles.date}>2017 – 2022</span>
           </h3>
-          <h4 className="company">PayPal</h4>
+          <h4 className={styles.company}>PayPal</h4>
           <ul>
             <li>
               Led experiment implementations on Node.js + React stack that
@@ -86,11 +88,12 @@ export default function Resume() {
             </li>
           </ul>
         </div>
-        <div className="item">
-          <h3 className="position">
-            Software Engineering Intern <span className="date">2016</span>
+        <div className={styles.item}>
+          <h3 className={styles.position}>
+            Software Engineering Intern{' '}
+            <span className={styles.date}>2016</span>
           </h3>
-          <h4 className="company">The New York Times</h4>
+          <h4 className={styles.company}>The New York Times</h4>
           <ul>
             <li>
               Increased CMS search speed 10x w/ Elasticsearch, redesigned UI.
@@ -101,11 +104,12 @@ export default function Resume() {
             </li>
           </ul>
         </div>
-        <div className="item">
-          <h3 className="position">
-            Web Developer & Designer <span className="date">2014 – 2017</span>
+        <div className={styles.item}>
+          <h3 className={styles.position}>
+            Web Developer & Designer{' '}
+            <span className={styles.date}>2014 – 2017</span>
           </h3>
-          <h4 className="company">UCLA Athletics</h4>
+          <h4 className={styles.company}>UCLA Athletics</h4>
           <ul>
             <li>
               Worked among several departments to prioritize, design, and build
@@ -117,11 +121,12 @@ export default function Resume() {
             </li>
           </ul>
         </div>
-        <div className="item">
-          <h3 className="position">
-            Managing Editor, Digital <span className="date">2014 – 2015</span>
+        <div className={styles.item}>
+          <h3 className={styles.position}>
+            Managing Editor, Digital{' '}
+            <span className={styles.date}>2014 – 2015</span>
           </h3>
-          <h4 className="company">Daily Bruin</h4>
+          <h4 className={styles.company}>Daily Bruin</h4>
           <ul>
             <li>
               Edited and advised 80+ people in web development, videography,
@@ -130,49 +135,49 @@ export default function Resume() {
           </ul>
         </div>
       </section>
-      <section className="col right">
+      <section className={`${styles.col} ${styles.right}`}>
         <h2>Education</h2>
-        <div className="item">
-          <h3 className="school">
-            UCLA <span className="date">2017</span>
+        <div className={styles.item}>
+          <h3 className={styles.school}>
+            UCLA <span className={styles.date}>2017</span>
           </h3>
           Computer Science & Linguistics, B.A.
         </div>
-        <div className="tech-skills">
+        <div className={styles.techSkills}>
           <h2>Skills</h2>
           <h3>Product</h3>
-          <p className="item">
+          <p className={styles.item}>
             PRDs, A/B testing, scrum master, cross-functional collaboration,
             prototyping, UX design, data analytics
           </p>
           <h3>Technical</h3>
-          <p className="item">
+          <p className={styles.item}>
             Python, JavaScript, SQL, React, HTML/CSS, API design
           </p>
           <h3>Tools</h3>
-          <p className="item">Jira, Figma, Claude Code & Cowork</p>
+          <p className={styles.item}>Jira, Figma, Claude Code & Cowork</p>
         </div>
         <h2>Personal Projects</h2>
-        <ul className="projects item">
+        <ul className={`${styles.projects} ${styles.item}`}>
           <li>
-            <span className="project-name">TrainTracker</span>: live-updating
-            map for North American passenger rail
+            <span className={styles.projectName}>TrainTracker</span>:
+            live-updating map for North American passenger rail
           </li>
           <li>
-            <span className="project-name">Stream Editor</span>: use
+            <span className={styles.projectName}>Stream Editor</span>: use
             command-line text manipulation tools interactively on the web
           </li>
           <li>
-            <span className="project-name">Weather/transit board</span>:
+            <span className={styles.projectName}>Weather/transit board</span>:
             colorful, informative LED fridge magnet using HTML Canvas
           </li>
           <li>
-            <span className="project-name">Slack Meetups</span>: pair people in
-            a channel for 1:1s and generate visual reports
+            <span className={styles.projectName}>Slack Meetups</span>: pair
+            people in a channel for 1:1s and generate visual reports
           </li>
         </ul>
         <h2>More Skills & Achievements</h2>
-        <ul className="skills item">
+        <ul className={`${styles.skills} ${styles.item}`}>
           <li>
             FAA-licensed private aircraft pilot & commercial drone operator
           </li>

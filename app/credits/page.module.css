@@ -1,0 +1,15 @@
+.credits {
+  max-width: 800px;
+
+  h1 {
+    line-height: 1.2;
+  }
+}
+
+.creditsList li {
+  margin: 0.25em 0;
+}
+
+.license {
+  opacity: 0.65;
+}

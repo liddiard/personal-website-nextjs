@@ -1,8 +1,10 @@
 'use client'
 
+import styles from './print-button.module.css'
+
 const PrintButton = () => (
   <div
-    className="print"
+    className={styles.print}
     role="button"
     tabIndex={-1}
     onClick={() => window.print()}

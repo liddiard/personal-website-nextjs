@@ -9,6 +9,7 @@ import {
   type Media,
   type Project,
 } from '@/lib/projects'
+import styles from './page.module.css'
 
 interface ProjectPageProps {
   params: Promise<{ slug: string }>
@@ -87,7 +88,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <ProjectLink
           href={metadata.link}
           linkConfirmation={metadata.linkConfirmation}
-          className="project-link"
         >
           {prettifyUrl(metadata.link)}
         </ProjectLink>
@@ -111,11 +111,14 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   )
 
   return (
-    <Layout page="project" className={isArticleLayout ? 'article-layout' : ''}>
+    <Layout
+      page={styles.project}
+      className={isArticleLayout ? styles.articleLayout : ''}
+    >
       <article>
         <h1 className="highlight">{metadata.title}</h1>
         <h2>{metadata.description}</h2>
-        <table className="project-info">
+        <table className={styles.projectInfo}>
           <tbody>
             {link}
             <tr>
@@ -130,7 +133,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </tbody>
         </table>
         <div
-          className="article-body"
+          className={styles.articleBody}
           dangerouslySetInnerHTML={{ __html: project.html }}
         />
       </article>
