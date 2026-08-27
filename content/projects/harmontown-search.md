@@ -4,7 +4,7 @@ description: Search 6+ million words spoken in the cult-favorite comedy podcast
 year: 2023
 link: https://harmonsearch.com
 linkConfirmation: >
-  Heads up, the podcast contains explicit content. You won’t find it on the homepage, but you will if you search for it and possibly unintentionally while browsing. Continue?
+  Just a heads up: This podcast contains explicit content. You won’t find it on the homepage, but you will if you search for it and possibly unintentionally while browsing. Continue?
 involvement: creator
 skills: Next.js, TypeScript, React, full-text search, Python
 github: liddiard/harmontown-search
