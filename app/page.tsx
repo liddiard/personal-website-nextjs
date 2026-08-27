@@ -51,8 +51,8 @@ export default function Home() {
             with a software engineering background.
           </p>
           <p>
-            Check out my <a href="#projects">projects</a> below and my{' '}
-            <Link href="/resume">resumé</Link> for some things I’ve done. You
+            Check out my <a href="#projects">projects</a> and{' '}
+            <Link href="/resume">resumé</Link> for a closer look at my work. You
             can also find me on{' '}
             <a
               href="https://linkedin.com/in/liddiard"
@@ -93,7 +93,7 @@ export default function Home() {
         Projects
       </h2>
       <p className={styles.sectionIntro}>
-        Here are some things I’ve built over the years:
+        A selection of what I’ve built over the years:
       </p>
       <ul className={styles.projects}>
         {projects.map((project) => (
