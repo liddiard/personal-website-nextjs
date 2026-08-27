@@ -52,7 +52,7 @@ export default function Home() {
           </p>
           <p>
             Check out my <a href="#projects">projects</a> and{' '}
-            <Link href="/resume">resumé</Link> for a closer look at my work. You
+            <Link href="/resume">resumé</Link> for an overview of my work. You
             can also find me on{' '}
             <a
               href="https://linkedin.com/in/liddiard"
@@ -93,7 +93,7 @@ export default function Home() {
         Projects
       </h2>
       <p className={styles.sectionIntro}>
-        A selection of what I’ve built over the years:
+        A selection of things I’ve built over the years:
       </p>
       <ul className={styles.projects}>
         {projects.map((project) => (
