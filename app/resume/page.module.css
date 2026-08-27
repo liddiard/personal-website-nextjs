@@ -5,13 +5,6 @@
   position: relative;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.4;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-
-  nav,
-  .pageHeader {
-    grid-column: 1 / -1;
-  }
 
   h1:not(.pageTitle),
   h2,
@@ -110,8 +103,12 @@
 
     @media print {
       display: block;
-      grid-column: 1 / -1;
     }
+  }
+
+  .resumeBody {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
   }
 
   .col {
