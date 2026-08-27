@@ -8,7 +8,8 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
 
-  nav {
+  nav,
+  .pageHeader {
     grid-column: 1 / -1;
   }
 
@@ -64,7 +65,14 @@
     margin: 0.75em 0;
   }
 
-  .headerResume {
+  .pageHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1em;
+  }
+
+  .printHeader {
     display: none;
 
     h1 {

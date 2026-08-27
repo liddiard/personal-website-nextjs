@@ -13,8 +13,11 @@ export const metadata: Metadata = {
 export default function Resume() {
   return (
     <Layout page={styles.resume} className={oxygen.variable}>
-      <h1 className={styles.pageTitle}>Resumé</h1>
-      <header className={styles.headerResume}>
+      <div className={styles.pageHeader}>
+        <h1 className={styles.pageTitle}>Resumé</h1>
+        <PrintButton />
+      </div>
+      <header className={styles.printHeader}>
         <h1>Harrison Liddiard</h1>
         <ul className={styles.contact}>
           <li>
@@ -35,7 +38,6 @@ export default function Resume() {
           </li>
         </ul>
       </header>
-      <PrintButton />
       <section className={`${styles.col} ${styles.left}`}>
         <h2>Work Experience</h2>
         <div className={styles.item}>
