@@ -15,10 +15,6 @@
     }
   }
 
-  @media (max-width: 600px) {
-    grid-column: 1;
-  }
-
   @media print {
     display: none;
   }

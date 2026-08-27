@@ -109,6 +109,23 @@
   .resumeBody {
     display: grid;
     grid-template-columns: 2fr 1fr;
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+
+      .col.left,
+      .col.right {
+        padding: 0;
+      }
+
+      .item {
+        padding-left: 0.5em;
+      }
+
+      .date {
+        font-size: 85%;
+      }
+    }
   }
 
   .col {
@@ -163,23 +180,6 @@
 
   .projectName {
     font-weight: bold;
-  }
-
-  @media (max-width: 600px) {
-    grid-template-columns: 1fr;
-
-    .col.left,
-    .col.right {
-      padding: 0;
-    }
-
-    .item {
-      padding-left: 0.5em;
-    }
-
-    .date {
-      font-size: 85%;
-    }
   }
 
   @media print {

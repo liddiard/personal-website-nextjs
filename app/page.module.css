@@ -22,7 +22,7 @@
   grid-template-columns: 3fr 2fr;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .intro,
   .interestsSection {
     grid-template-columns: 1fr;
@@ -81,7 +81,7 @@
   flex-direction: column;
   gap: 1.5em;
 
-  @media (min-width: 800px) {
+  @media (min-width: 600px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 2em;
