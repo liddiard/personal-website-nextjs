@@ -4,11 +4,15 @@ description: Mail a document anywhere in the U.S. under 60 seconds
 year: 2016
 github: liddiard/mailpdf
 involvement: creator
-skills: Node.js, Express, React, ES6, Sass, UX design
+skills: Node.js, Express, React, ES6, UX design
+link: https://mailpdf.online/?demo
 media:
+  - type: image
+    filename: envelope-filled.png
+    caption: The main page features a skeuomorphic envelope for entering sender and recipient addresses.
   - type: video
-    filename: 1.mp4
-    caption: Mailing a PDF document in under 60 seconds (despite my slow typing)
+    filename: full-flow.mp4
+    caption: Mailing a PDF document in under 60 seconds
 type: software
 ---
 
@@ -18,4 +22,4 @@ Mail a PDF Online lets you do exactly what it says with a simple one-page interf
 
 The interface is designed to be fast, self explanatory, and error tolerant. It provides concise information, instant feedback when appropriate, and upfront pricing.
 
-This React and Node.js + Express application is deployed in a Docker container on [DigitalOcean](https://digitalocean.com/). All assets are compressed and distributed through [Cloudflare](https://cloudflare.com/) for quick access with any connection speed. [Let’s Encrypt](https://letsencrypt.org/) and Cloudflare provide SSL.
+This React and Node.js + Express application is deployed in a Docker container. All assets are compressed and distributed through [Cloudflare](https://cloudflare.com/) for quick access with any connection speed. [Let’s Encrypt](https://letsencrypt.org/) and Cloudflare provide SSL.
