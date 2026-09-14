@@ -4,7 +4,7 @@ description: Quarterly lifestyle magazine
 year: 2013
 involvement: website creator
 skills: Django, PostgreSQL, parsing, content management, web development
-link: http://graphics.dailybruin.com/prime
+link: https://prime.dailybruin.com/
 github: daily-bruin/appletini
 media:
   - type: image

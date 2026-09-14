@@ -17,7 +17,9 @@ media:
 type: software
 ---
 
-_2025 update: I’ve developed a [newer version of TypeEmoji here](/project/typeemoji-llm/)!_
+**2025 update:** I’ve developed a [newer version of TypeEmoji here](/project/typeemoji-llm/)!
+
+---
 
 Unicode emoji are all the rage these days – they’re great for adding expression and flair to an online conversation, and they’re supported almost everywhere. The hardest part of using them is finding the right one.
 
